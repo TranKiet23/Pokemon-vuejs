@@ -85,18 +85,18 @@
 
             </thead>
             <tbody v-for="item, index in  dataList" :key="index">
-              <tr :class="{ 'odd': index % 2 }" @click="viewDetails(item)">
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.number }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.name }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.total }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.hp }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.attack }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.defense }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.sp_atk }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.sp_def }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ item.speed }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ covertDate(item.created_at) }}</td>
-                <td :title="'click show detail: ' + item.name" class="td-center">{{ covertDate(item.updated_at) }}</td>
+              <tr :title="'click show detail: ' + item.name" :class="{ 'odd': index % 2 }" @click="viewDetails(item)">
+                <td class="td-center">{{ item.number }}</td>
+                <td class="td-center">{{ item.name }}</td>
+                <td class="td-center">{{ item.total }}</td>
+                <td class="td-center">{{ item.hp }}</td>
+                <td class="td-center">{{ item.attack }}</td>
+                <td class="td-center">{{ item.defense }}</td>
+                <td class="td-center">{{ item.sp_atk }}</td>
+                <td class="td-center">{{ item.sp_def }}</td>
+                <td class="td-center">{{ item.speed }}</td>
+                <td class="td-center">{{ covertDate(item.created_at) }}</td>
+                <td class="td-center">{{ covertDate(item.updated_at) }}</td>
               </tr>
             </tbody>
             <tbody v-if="dataList.length == 0">

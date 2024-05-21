@@ -250,7 +250,7 @@ export default {
         font-size: 14px;
 
         &:hover {
-            background-color: #c8d1e1;
+            background-color: #5689e0;
             ;
         }
     }
