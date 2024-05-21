@@ -46,7 +46,7 @@
           <table class="table">
             <thead>
               <th style="min-width: 25px;">No.</th>
-              <th class="th-center th-sort"> Name
+              <th class="th-center th-sort" style="min-width: 120px;"> Name
               </th>
               <th class="th-center th-sort"><span style="margin-right: 10px;"><i class="icon-vertor-up"
                     @click="sortData('total', 'asc')" :class="{ 'hidden': sortField.total === 1 }"></i> <i
@@ -62,17 +62,17 @@
                     @click="sortData('attack', 'asc')"></i> <i class="icon-vertor-down"
                     :class="{ 'hidden': sortField.attack === 2 }" @click="sortData('attack', 'desc')"></i></span>Attack
               </th>
-              <th class="th-center th-sort" style="min-width: 120px;"><span><i class="icon-vertor-up"
+              <th class="th-center th-sort" style="min-width: 100px;"><span><i class="icon-vertor-up"
                     :class="{ 'hidden': sortField.defense === 1 }" @click="sortData('defense', 'asc')"></i> <i
                     class="icon-vertor-down" :class="{ 'hidden': sortField.defense === 2 }"
                     @click="sortData('defense', 'desc')"></i></span>Defense
               </th>
-              <th class="th-center th-sort" style="min-width: 125px;"><span><i class="icon-vertor-up"
+              <th class="th-center th-sort" style="min-width: 100px;"><span><i class="icon-vertor-up"
                     :class="{ 'hidden': sortField.sp_atk === 1 }" @click="sortData('sp_atk', 'asc')"></i> <i
                     class="icon-vertor-down" :class="{ 'hidden': sortField.sp_atk === 2 }"
                     @click="sortData('sp_atk', 'desc')"></i></span>Sp
                 Attack</th>
-              <th class="th-center th-sort" style="min-width: 125px;"><span><i class="icon-vertor-up"
+              <th class="th-center th-sort" style="min-width: 100px;"><span><i class="icon-vertor-up"
                     :class="{ 'hidden': sortField.sp_def === 1 }" @click="sortData('sp_def', 'asc')"></i> <i
                     class="icon-vertor-down" :class="{ 'hidden': sortField.sp_def === 2 }"
                     @click="sortData('sp_def', 'desc')"></i></span>Sp
