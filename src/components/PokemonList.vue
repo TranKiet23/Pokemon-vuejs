@@ -8,7 +8,7 @@
         <form class="content-header search-form" @submit.prevent="search">
           <div class="form-group">
             <label>Name</label>
-            <input class="form-control" v-model="formSearch.name" />
+            <input class="form-control" style="text-transform: capitalize;" v-model="formSearch.name" />
           </div>
           <div class="form-group">
             <label>Type</label>
