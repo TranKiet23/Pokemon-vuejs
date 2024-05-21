@@ -27,7 +27,22 @@
           </div>
         </form>
         <div class="table-area">
-
+          <div class="w-full show-record">
+            <div class="title-show">
+              <span>
+                Show:
+              </span>
+            </div>
+            <div class="form-group">
+              <select v-model="perPage" @change="changeLimit" class="form-control">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+          </div>
           <table class="table">
             <thead>
               <th style="min-width: 25px;">No.</th>
@@ -60,7 +75,7 @@
               <th class="th-center th-sort" style="min-width: 125px;"><span><i class="icon-vertor-up"
                     :class="{ 'hidden': sortField.sp_def === 1 }" @click="sortData('sp_def', 'asc')"></i> <i
                     class="icon-vertor-down" :class="{ 'hidden': sortField.sp_def === 2 }"
-                    @click="sortData('sp_def', 'desc')"></i></span>SP
+                    @click="sortData('sp_def', 'desc')"></i></span>Sp
                 Defense</th>
               <th class="th-center th-sort"><span><i class="icon-vertor-up" :class="{ 'hidden': sortField.speed === 1 }"
                     @click="sortData('speed', 'asc')"></i> <i class="icon-vertor-down"
@@ -174,6 +189,9 @@ export default {
     },
     onChangePage(page) {
       this.getList(page)
+    },
+    changeLimit(){
+      this.getList(1)
     },
     // -------call api get list type --------
     async getTypes() {
