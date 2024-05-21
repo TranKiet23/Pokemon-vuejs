@@ -148,14 +148,12 @@ export default {
     const paramsSort = ref('')
     const isShow = ref(false)
     const dataDetail = ref({})
-    const fields = Service.getFieldsList()
     return {
       formSearch,
       dataList,
       pagina,
       perPage,
       paramsSort,
-      fields,
       sortField,
       typeList,
       dataDetail,
