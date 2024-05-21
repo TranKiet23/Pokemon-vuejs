@@ -16,14 +16,14 @@
                         <div class="form-group">
                             <label>Type 1</label>
                             <select class="form-control disabled" :value="dataDetail.type_1">
-                                <option v-for="(item, i) in typeList" :key="item.id" :value="item.id">{{ item.name }}
+                                <option v-for="(item) in typeList" :key="item.id" :value="item.id">{{ item.name }}
                                 </option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Type 2</label>
                             <select class="form-control disabled" :value="dataDetail.type_2">
-                                <option v-for="(item, i) in typeList" :key="item.id" :value="item.id">{{ item.name }}
+                                <option v-for="(item) in typeList" :key="item.id" :value="item.id">{{ item.name }}
                                 </option>
                             </select>
                         </div>
@@ -65,8 +65,6 @@
     </div>
 </template>
 <script>
-import { typeList } from 'ant-design-vue/es/message';
-
 export default {
     props: ["titlePage", "details", "typeList"],
     data() {
@@ -91,19 +89,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import url(../assets/style.scss);
 
 .modal {
     display: flex;
     position: fixed;
     z-index: 1;
-    padding-top: 50px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    /* Full height */
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
