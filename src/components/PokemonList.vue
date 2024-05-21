@@ -21,7 +21,7 @@
             <button class="btn" type="button" @click="resetForm">
               Reset
             </button>
-            <button class="btn" style="background-color: #90cdf4" type="submit">
+            <button class="btn" style="background-color: #328DC8" type="submit">
               Search
             </button>
           </div>
@@ -91,7 +91,7 @@
               </tr>
             </tbody>
           </table>
-          <Pagination style="margin-top: 12px;" v-if="pagina.total > 0" :totalPages="pagina.last_page"
+          <Pagination style="margin-top: 20px;" v-if="pagina.total > 0" :totalPages="pagina.last_page"
             :total="pagina.total" :perPage="perPage" :currentPage="currentPage" @page-changed="onChangePage">
           </Pagination>
         </div>
