@@ -180,6 +180,7 @@ export default {
     },
     // -------action sort --------
     sortData(paramsSort, type) {
+      this.sortField.reset();
       this.paramsSort = type === 'asc' ? `&sort=${paramsSort}` : `&sort=-${paramsSort}`;
       this.sortField[paramsSort] = type === 'asc' ? 1 : 2;
       setTimeout(() => {
