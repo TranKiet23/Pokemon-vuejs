@@ -45,7 +45,11 @@
           </div>
           <table class="table">
             <thead>
-              <th style="min-width: 25px;">No.</th>
+              <th style="min-width: 50px;" class="th-sort"><span><i class="icon-vertor-up"
+                    @click="sortData('number', 'asc')" :class="{ 'hidden': sortField.number === 1 }"></i> <i
+                    class="icon-vertor-down" :class="{ 'hidden': sortField.number === 2 }"
+                    @click="sortData('number', 'desc')"></i></span>No
+              </th>
               <th class="th-center th-sort" style="min-width: 120px;"> Name
               </th>
               <th class="th-center th-sort"><span style="margin-right: 10px;"><i class="icon-vertor-up"
@@ -139,7 +143,8 @@ export default {
       defense: 0,
       sp_atk: 0,
       sp_def: 0,
-      speed: 0
+      speed: 0,
+      number: 0,
     }))
     const typeList = ref([])
     const dataList = ref([])
