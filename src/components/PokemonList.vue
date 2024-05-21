@@ -14,15 +14,15 @@
             <label>Type</label>
             <select class="form-control" v-model="formSearch.type">
               <option value="">All</option>
-              <option v-for="item, i in typeList" :key="item.id" :value="item.id">{{ item.name }}</option>
+              <option v-for="item, in typeList" :key="item.id" :value="item.id">{{ item.name }}</option>
             </select>
           </div>
           <div class="group-btn">
-            <button class="btn" type="button" @click="resetForm">
-              Reset
+            <button class="btn btn-reset" type="button" @click="resetForm">
+              &#10062; Reset 
             </button>
-            <button class="btn" style="background-color: #328DC8" type="submit">
-              Search
+            <button class="btn" type="submit">
+              &#128269; Search 
             </button>
           </div>
         </form>
@@ -34,11 +34,10 @@
               </span>
             </div>
             <div class="form-group">
-              <select v-model="perPage" @change="changeLimit" class="form-control">
-                <option value="10">10</option>
+              <select v-model="perPage" @change="changeLimit" class="form-control">  
+                <option value="10">10</option>                
                 <option value="20">20</option>
                 <option value="30">30</option>
-                <option value="40">40</option>
                 <option value="50">50</option>
               </select>
             </div>
@@ -179,6 +178,8 @@ export default {
       this.getList(1);
     },
     search() {
+      this.paramsSort = "";
+      this.sortField.reset();
       this.getList(1);
     },
     // -------action sort --------
